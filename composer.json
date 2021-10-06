@@ -9,7 +9,7 @@
         "cmgmyr/messenger": "^2.22",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.3.0",
-        "laravel/framework": "^8.60",
+        "laravel/framework": "^8.61",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.6"
     },

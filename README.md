@@ -1,4 +1,4 @@
-# Laravel 8 使用者訊息服務
+# Laravel 10 使用者訊息服務
 
 使用者訊息服務運用得當的話，是一種非常便利且靈活的溝通工具，也是相對簡單又親切的聯繫方式，並且在各種商業環境中也越來越被大眾所接受。但是，發送即時訊息也有很多必須注意的事，在按下提交之前，記得確認你發送的對象是對的，確保沒有任何錯字和會產生誤會的詞句。如果文字所傳遞的訊息或是情緒有偏誤，可能會讓接收人誤解並產生反感。
 
@@ -16,13 +16,17 @@ $ composer install
 ```sh
 $ php artisan key:generate
 ```
-- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移。
+- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移，並執行資料庫填充（如果要測試的話）。
 ```sh
-$ php artisan migrate
+$ php artisan migrate --seed
 ```
-- 執行安裝 Laravel Mix 引用的依賴項目，並執行所有 Mix 任務。
+- 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
 ```sh
-$ npm install && npm run dev
+$ npm install
+```
+- 執行正式環境版本化資源管道並編譯。
+```sh
+$ npm run build
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/register` 來進行註冊。
@@ -31,11 +35,11 @@ $ npm install && npm run dev
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/UgWrd4Q.png)
+![](https://i.imgur.com/csu8WYl.png)
 > 可以選擇將訊息傳送至指定的使用者
 
-![](https://i.imgur.com/X2JjX9b.png)
+![](https://i.imgur.com/2h8eIfH.png)
 > 顯示未讀訊息的數量
 
-![](https://i.imgur.com/CWD2tjP.png)
+![](https://i.imgur.com/vEXGVSZ.png)
 > 只要在訊息發送前，先自己想一遍：「如果我是那個收到訊息的人，我會是什麼感覺？」就可以基本先過濾掉太 NG 的訊息了
